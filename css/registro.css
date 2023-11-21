@@ -1,0 +1,57 @@
+body{
+    background-color: cadetblue;
+}
+h1{
+    font-family: 'Roboto', sans-serif;
+}
+h3{
+    padding: 0;
+    margin: 0;
+}
+#content_01{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#content_02{
+    width: 500px;
+    height: 650px;
+    padding: 20px;
+    margin: 20px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+}
+#content_03{
+    display: flex;
+    justify-content: center;
+}
+#content_04{
+    display: block;
+    justify-content: center;
+    padding: 20px 10px;
+}
+.content_03{
+    padding: 30px 10px;
+}
+.content_003{
+    padding: 10px 0px;
+}
+.content_04{
+    width: 470px;
+    padding: 10px 0px;
+}
+.input_01{
+    width: 220px;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+.input_02{
+    width: 470px;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+.label{
+    font-family: 'Roboto', sans-serif;
+}
