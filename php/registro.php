@@ -1,56 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/registro.css">
+    <script src="../js/registro.js"></script>
 </head>
+
 <body>
     <div id="content_01">
         <div id="content_02">
-            <h1>formulario de registro</h1>
-            <form action="POST">
+            <h2>Formulario de registro</h2>
+            <form action="" method="POST">
                 <div id="content_03">
                     <div class="content_03">
                         <div class="content_003">
-                            <label for="name" class="label"><h3>Nombre:</h3></label>
+                            <label for="name" class="label">
+                                <h4>Nombre:</h4>
+                            </label>
                         </div>
-                        <input type="text" id="nombre" class="input_01" name="nombre" value="" require>
+                        <input placeholder="nombre" type="text" id="nombre" class="input_01" name="nombre" value="" pattern="[a-z]{2,15}" title="Letras. Tamaño: 2-15" required>
                     </div>
                     <div class="content_03">
                         <div class="content_003">
-                            <label for="lastname" class="label"><h3>Apellido:</h3></label>
+                            <label for="lastname" class="label">
+                                <h4>Apellido:</h4>
+                            </label>
                         </div>
-                        <input type="text" id="apellido" class="input_01" name="apellido" value="" require>
+                        <input placeholder="apellido" type="text" id="apellido" class="input_01" name="apellido" pattern="[a-z]{2,15}" title="Letras. Tamaño: 2-15" value="" required>
                     </div>
                 </div>
                 <div id="content_04">
                     <div class="content_04">
-                        <label for="email" class="label"><h3>Correo electronico:</h3></label>
+                        <label for="email" class="label">
+                            <h4>Correo electronico:</h4>
+                        </label>
                     </div>
-                    <input type="mail" id="mail" class="input_02" name="mail" value="" require>
-
-                </div>  
-                <div id="content_04">
-                    <div class="content_04">
-                        <label for="name" class="label"><h3>Usuario:</h3></label>
-                    </div>
-                    <input type="text" id="user" class="input_02" name="user" value="" require>
+                    <input placeholder="ejemplo123@mail.com" type="mail" id="mail" class="input_02" name="mail" value="" pattern="[A-Za-z0-9]{2,15}@[a-z]{2,15}" title="Letras y numeros. Tamaño: 2-15 .Luego '@' letras. Tamaño: 2-15" required>
 
                 </div>
                 <div id="content_04">
                     <div class="content_04">
-                        <label for="password" class="label"><h3>Contraseña:</h3></label>
+                        <label for="name" class="label">
+                            <h4>Usuario:</h4>
+                        </label>
                     </div>
-                    <input type="text" id="pass" class="input_02" name="password" value="" require>
+                    <input placeholder="nombre" type="text" id="user" class="input_02" name="user" value="" pattern="[A-Za-z0-9]{2,15}" title="Letras. Tamaño: 2-15" required>
 
                 </div>
-                <div>
-                    <button type="submit" onclick="">Crear</button>
+                <div id="content_04">
+                    <div class="content_04">
+                        <label for="password" class="label">
+                            <h4>Contraseña:</h4>
+                        </label>
+                    </div>
+                    <input placeholder="contraseña" type="password" id="pass" class="input_02" name="password" value="" pattern="[A-Za-z0-9]{2,15}" title="Letras. Tamaño: 2-15" required>
+
+                </div>
+                <div id="button">
+                    <button type="submit" id="button_00" onclick="registrar(
+                        document.getElementById('nombre').value,
+                        document.getElementById('apellido').value,
+                        document.getElementById('mail').value,
+                        document.getElementById('user').value,
+                        document.getElementById('pass').value
+                    )">
+                        <h4>Crear</h4>
+                    </button>
                 </div>
             </form>
         </div>
     </div>
 </body>
+
 </html>
