@@ -1,6 +1,6 @@
 <?php
 define("HOST", "localhost");
-define("BD", "jotack");
+define("BD", "jotacks");
 define("USER", "root");
 define("PASSWORD", "");
 
