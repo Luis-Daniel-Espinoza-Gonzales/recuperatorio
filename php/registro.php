@@ -22,7 +22,7 @@
                                 <h4>Nombre:</h4>
                             </label>
                         </div>
-                        <input placeholder="nombre" type="text" id="nombre" class="input_01" name="nombre" value="" pattern="[A-Za-z]{2,15}\s[A-Za-z]{2,15}" title="Letras. Tamaño: 2-15" required>
+                        <input placeholder="nombre" type="text" id="nombre" class="input_01" name="nombre" value="" pattern="[A-Za-z]{2,15}(\s[A-Za-z]{2,15})?" title="Letras. Tamaño: 2-15" required>
                     </div>
                     <div class="content_03">
                         <div class="content_003">
@@ -30,7 +30,7 @@
                                 <h4>Apellido:</h4>
                             </label>
                         </div>
-                        <input placeholder="apellido" type="text" id="apellido" class="input_01" name="apellido" pattern="[A-Za-z\s]{2,15}\s[A-Za-z]{2,15}" title="Letras. Tamaño: 2-15" value="" required>
+                        <input placeholder="apellido" type="text" id="apellido" class="input_01" name="apellido" pattern="[A-Za-z\s]{2,15}(\s[A-Za-z]{2,15})?" title="Letras. Tamaño: 2-15" value="" required>
                     </div>
                 </div>
                 <div id="content_04">
@@ -39,8 +39,8 @@
                             <h4>Correo electronico:</h4>
                         </label>
                     </div>
-                    <input placeholder="ejemplo123@mail.com" type="mail" id="mail" class="input_02" name="mail" value="" pattern="[A-Za-z0-9]{2,15}@[a-z]{2,15}.[a-z]{2,15}" title="Letras y numeros. Tamaño: 2-15 .Luego '@' letras. Tamaño: 2-15" required>
-
+                    <input placeholder="ejemplo123@mail.com" type="mail" id="mail" class="input_02" name="mail" value="" pattern="[A-Za-z0-9]{2,15}@[a-z]{2,15}\.[a-z]{2,15}" title="Letras y numeros. Tamaño: 2-15 .Luego '@' letras. Tamaño: 2-15" required>
+    
                 </div>
                 <div id="content_04">
                     <div class="content_04">

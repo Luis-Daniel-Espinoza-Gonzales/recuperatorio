@@ -13,8 +13,8 @@ switch ($_POST['comprobar']) {
 
         $hash = password_hash($pass, PASSWORD_BCRYPT);
 
-        $comprobar_mail = "SELECT * FROM `usuarios` WHERE `correo_electronico` = `$mail`";
-        $comprobar_user = "SELECT * FROM `usuarios` WHERE `nombre_usuario` = `$user`";
+        $comprobar_mail = "SELECT * FROM `usuarios` WHERE `correo_electronico` = '$mail'";
+        $comprobar_user = "SELECT * FROM `usuarios` WHERE `nombre_usuario` = '$user'";
 
         $result_01 = mysqli_query($con, $comprobar_mail);
         $result_02 = mysqli_query($con, $comprobar_user);
