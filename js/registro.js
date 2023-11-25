@@ -1,35 +1,46 @@
-function registro(nombre, apellido, mail, user, pass) {
+function verificar_campo(nombre, apellido, mail, user, pass){
     error = false;
-    if(nombre == " "){
+    if(nombre.trim() === ""){
         error = true;
         alert("Por favor complete el campo de nombre.");
     }
-    else if(!/^[A-Za-z](\s[A-Za-z])?/.test(nombre)){
-        error = true;
-        alert("No se permiten caracteres especiales. El orden puede se ser el primer nombre solo o el primer nombre, espacio, el segundo nombre.");
-    }
-    else if(apellido == " "){
+    else if(apellido.trim() === ""){
         error = true;
         alert("Por favor complete el campo de apellido.");
     } 
+    else if(mail.trim() === ""){
+        error = true;
+        alert("Por favor complete el campo de correo electronico.");
+    }
+    else if(user.trim() === ""){
+        error = true;
+        alert("Por favor complete el campo de nombre de usuario.");
+    }
+    else if(pass.trim() === ""){
+        error = true;
+        alert("Por favor complete el campo de contraseña.");
+    }
+    if(error){
+
+    }
+}
+function registro(nombre, apellido, mail, user, pass) {
+    error = false;
+    if(!/^[A-Za-z](\s[A-Za-z])?/.test(nombre)){
+        error = true;
+        alert("No se permiten caracteres especiales. El orden puede se ser el primer nombre solo o el primer nombre, espacio, el segundo nombre.");
+    }
     else if(!/^[A-Za-z](\s[A-Za-z])?/.test(apellido)){
         error = true;
         alert("No se permiten caracteres especiales. El orden puede se ser el primer apellido solo o el primer apellido, espacio, el segundo apellido.");
     }
-    else if(mail == " "){
+    else if(!/^[\w-]+/.test(mail)){
         error = true;
-        alert("Por favor complete el campo de correo electronico.");
+        alert("Ingrese un nombre de usuario del correo electronico que sea valido.");
     }
-    if(mail.includes('@gmail.com') || mail.includes('@hotmail.com') || mail.includes('@outlook.com')){
-        error = false;
-    }
-    else{
+    else if(!mail.includes('@gmail.com') && !mail.includes('@hotmail.com') && !mail.includes('@outlook.com')){
         error = true;
-        alert("Ingrese un correo valido.");
-    }
-    if(user == " "){
-        error = true;
-        alert("Por favor complete el campo de nombre de usuario.");
+        alert("Ingrese un dominio valido.");
     }
     else if(!/^[A-Za-z0-9]/.test(user)){
         error = true;

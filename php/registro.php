@@ -39,7 +39,7 @@
                             <h4>Correo electronico:</h4>
                         </label>
                     </div>
-                    <input placeholder="ejemplo123@mail.com" type="mail" id="mail" class="input_02" name="mail" value="" pattern="[A-Za-z0-9]{2,15}@[a-z]{2,15}\.[a-z]{2,15}" title="Letras y numeros. Tamaño: 2-15 .Luego '@' letras. Tamaño: 2-15" required>
+                    <input placeholder="ejemplo123@mail.com" type="mail" id="mail" class="input_02" name="mail" value="" pattern="[A-Za-z0-9]{1,15}@[a-z]{2,15}\.[a-z]{2,15}" title="Letras y numeros. Tamaño: 2-15 .Luego '@' letras. Tamaño: 2-15" required>
     
                 </div>
                 <div id="content_04">
@@ -48,7 +48,7 @@
                             <h4>Usuario:</h4>
                         </label>
                     </div>
-                    <input placeholder="nombre" type="text" id="user" class="input_02" name="user" value="" pattern="[A-Za-z0-9]{2,15}" title="Letras. Tamaño: 2-15" required>
+                    <input placeholder="nombre" type="text" id="user" class="input_02" name="user" value="" pattern="[A-Za-z0-9]{1,15}" title="Letras. Tamaño: 2-15" required>
 
                 </div>
                 <div id="content_04">
@@ -61,7 +61,15 @@
 
                 </div>
                 <div id="button">
-                    <input type="button" id="button_00" onclick="registro(
+                    <input type="button" id="button_00" onclick="
+                    verificar_campo(
+                        document.getElementById('nombre').value,
+                        document.getElementById('apellido').value,
+                        document.getElementById('mail').value,
+                        document.getElementById('user').value,
+                        document.getElementById('pass').value
+                    ),
+                    registro(
                         document.getElementById('nombre').value,
                         document.getElementById('apellido').value,
                         document.getElementById('mail').value,
